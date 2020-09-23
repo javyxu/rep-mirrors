@@ -10,8 +10,8 @@ env:
     - ALI_REGISTRY=registry.cn-beijing.aliyuncs.com/javy_xu
 
 before_script:
-  - echo Javy9289 | docker login $ALI_REGISTRY --username javy_xu --password-stdin
-  # - echo "$ALI_PASSWORD" | docker login "$ALI_REGISTRY" -u "$ALI_USERNAME" -p "$ALI_PASSWORD"
+  # - echo Javy9289 | docker login $ALI_REGISTRY --username javy_xu --password-stdin
+  echo "$ALI_PASSWORD" | docker login "$ALI_REGISTRY" -u "$ALI_USERNAME" --password-stdin
   # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
  
 script:

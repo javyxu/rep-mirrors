@@ -1,4 +1,5 @@
 gcr.io/kfserving/kfserving-controller:0.2.2
+gcr.io/kubeflow-images-public/admission-webhook:v20190520-v0-139-gcee39dbc-dirty-0d8f4c
 gcr.io/kubeflow-images-public/ingress-setup:latest
 gcr.io/kubeflow-images-public/kubernetes-sigs/application:1.0-beta
 gcr.io/kubeflow-images-public/centraldashboard:v1.0.0-g3ec0de71

@@ -16,6 +16,7 @@ before_script:
 script:
   - echo "start pull and retag and push"
   - |
+    docker rmi $(docker images -q)
     for image in $(cat img-list.txt)
     do
       image_name=${image##*/}

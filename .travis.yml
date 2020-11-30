@@ -32,7 +32,7 @@ script:
       # push到dockerhub
       # docker push $DOCKER_HUB/$image_name
       # push到阿里云仓库
-      docker push $ALI_REGISTRY/$image_name
+      travis_wait 30 docker push $ALI_REGISTRY/$image_name
       echo push image to aliyun
       docker rmi $ALI_REGISTRY/$image_name
       echo remove docker local image

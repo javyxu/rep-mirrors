@@ -24,11 +24,11 @@ script:
       # docker tag $image $DOCKER_HUB/$image_name
       echo $ALI_REGISTRY
       docker tag $image $ALI_REGISTRY/$image_name
-      docker rm $image
+      docker rmi $image
     	
       # push到dockerhub
       # docker push $DOCKER_HUB/$image_name
       # push到阿里云仓库
       docker push $ALI_REGISTRY/$image_name
-      docker rm $ALI_REGISTRY/$image_name
+      docker rmi $ALI_REGISTRY/$image_name
     done

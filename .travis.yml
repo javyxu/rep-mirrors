@@ -20,15 +20,20 @@ script:
     do
       image_name=${image##*/}
       image_name=${image_name%@*}
+      echo start pull image $image_name
       docker pull $image
       # docker tag $image $DOCKER_HUB/$image_name
-      echo $ALI_REGISTRY
+      echo aliyun registry is $ALI_REGISTRY
       docker tag $image $ALI_REGISTRY/$image_name
+      echo docker tag
       docker rmi $image
+      echo remove grc.io image
     	
       # push到dockerhub
       # docker push $DOCKER_HUB/$image_name
       # push到阿里云仓库
       docker push $ALI_REGISTRY/$image_name
+      echo push image to aliyun
       docker rmi $ALI_REGISTRY/$image_name
+      echo remove docker local image
     done

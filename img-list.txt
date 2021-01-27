@@ -1,3 +1,4 @@
+nvcr.io/nvidia/tritonserver:20.07-py3-clientsdk
 gcr.io/knative-releases/knative.dev/serving/cmd/webhook:latest
 gcr.io/knative-releases/knative.dev/net-istio/cmd/controller:latest
 gcr.io/knative-releases/knative.dev/net-istio/cmd/webhook:latest

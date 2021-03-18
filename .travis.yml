@@ -20,8 +20,8 @@ script:
     do
       image_name=${image##*/}
       if [[ $image_name =~ "sha256" ]]; then
-        tmp=${image//// }
-        image_name=${image_name%@*}_${tmp[3]}
+        tmp=(${image//// })
+        image_name=${image_name%@*}:${tmp[3]}-kf-1.2
       fi
       echo start pull image $image_name
       docker pull $image

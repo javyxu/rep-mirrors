@@ -19,7 +19,10 @@ script:
     for image in $(cat img-list.txt)
     do
       image_name=${image##*/}
-      image_name=${image_name%@*}
+      if [[ $image_name =~ "sha256" ]]; then
+        tmp=${image//// }
+        image_name=${image_name%@*}_${tmp[3]}
+      fi
       echo start pull image $image_name
       docker pull $image
       # docker tag $image $DOCKER_HUB/$image_name

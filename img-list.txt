@@ -1,3 +1,4 @@
+k8s.gcr.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2
 k8s.gcr.io/kube-apiserver:v1.15.9
 k8s.gcr.io/kube-controller-manager:v1.15.9
 k8s.gcr.io/kube-scheduler:v1.15.9
